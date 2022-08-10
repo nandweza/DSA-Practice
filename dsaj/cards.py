@@ -10,14 +10,16 @@ def locate_cards(cards, query):
     #the position has to be less than the len(cards) so we can access it.
     while position < len(cards):
         #print('position:', position)
-
+        cards.sort()
         if cards[position] == query:
+            
+            print('cards:', cards)
             return position
         position += 1
     return -1
 
 a = [9, 8, 7, 5, 4, 2, 1]
-b = 5
+b = 7
 
 c = locate_cards(a, b)
 print(c)
